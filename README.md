@@ -1,6 +1,6 @@
-Karma: The Intelligent AI Orchestrator
+Project Zeta: The Intelligent AI Orchestrator
 
-![Karma Logo Placeholder](https://placehold.co/150x150/333333/FFFFFF?text=Karma+AI)
+![Project Zeta Logo Placeholder](https://placehold.co/150x150/333333/FFFFFF?text=Project+Zeta)
 
 Your Personalized AI Powerhouse for Seamless Multi-Model Interaction and Autonomous Task Execution.
 
@@ -8,16 +8,16 @@ Your Personalized AI Powerhouse for Seamless Multi-Model Interaction and Autonom
 
 ## Table of Contents
 
-* [About Karma](#about-karma)
+* [About Project Zeta](#about-project-zeta)
 * [Vision](#vision)
 * [Key Features](#key-features)
 * [License](#license)
 
 ---
 
-## About Karma
+## About Project Zeta
 
-Karma is a revolutionary AI application designed to simplify and supercharge your interactions with artificial intelligence. It goes beyond simple chatbot interfaces by orchestrating multiple AI models, understanding your unique needs, and even creating autonomous AI agents to tackle complex tasks on your behalf. Karma ensures that you get the most out of AI, without needing to be an expert in prompt engineering or workflow design.
+Project Zeta is a revolutionary AI application designed to simplify and supercharge your interactions with artificial intelligence. It goes beyond simple chatbot interfaces by orchestrating multiple AI models, understanding your unique needs, and even creating autonomous AI agents to tackle complex tasks on your behalf. Project Zeta ensures that you get the most out of AI, without needing to be an expert in prompt engineering or workflow design.
 
 ## Vision
 
@@ -34,4 +34,3 @@ To make the vast potential of artificial intelligence universally accessible and
 ## License
 
 This project is licensed under the MIT License - see the `LICENSE` file for details.
-

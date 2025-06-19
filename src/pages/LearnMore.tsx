@@ -18,7 +18,7 @@ const LearnMore = () => {
             <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Home
           </Link>
-          <span className="text-xl font-bold gradient-text">KARMA</span>
+          <span className="text-xl font-bold gradient-text">PROJECT ZETA</span>
         </motion.nav>
       </header>
 

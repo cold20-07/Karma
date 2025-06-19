@@ -73,7 +73,7 @@ const WaitlistModal: React.FC<WaitlistModalProps> = ({ isOpen, onClose }) => {
               <X size={20} />
             </button>
 
-            <h2 className="text-2xl font-bold mb-6 gradient-text">Join Karma Waitlist</h2>
+            <h2 className="text-2xl font-bold mb-6 gradient-text">Join Project Zeta Waitlist</h2>
 
             {success ? (
               <motion.div

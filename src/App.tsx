@@ -19,7 +19,7 @@ const App = () => {
           transition={{ duration: 0.6 }}
           className="max-w-7xl mx-auto flex justify-between items-center"
         >
-          <span className="text-xl font-bold gradient-text">KARMA</span>
+          <span className="text-xl font-bold gradient-text">PROJECT ZETA</span>
           <div className="px-4 py-2 border border-white/20 rounded-full text-sm">
             Coming Soon
           </div>
@@ -42,7 +42,7 @@ const App = () => {
               <span className="gradient-text">AI Orchestration</span>
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Karma revolutionizes AI workflows by intelligently orchestrating multiple models, 
+              Project Zeta revolutionizes AI workflows by intelligently orchestrating multiple models, 
               optimizing prompts, and automating complex tasks through a unified protocol.
             </p>
             <motion.div 
@@ -177,7 +177,7 @@ const App = () => {
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-white/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-          <span className="text-gray-400 mb-4 md:mb-0">© 2025 Karma AI. All rights reserved.</span>
+          <span className="text-gray-400 mb-4 md:mb-0">© 2025 Project Zeta. All rights reserved.</span>
           <div className="flex space-x-6">
             {['About', 'Documentation', 'GitHub'].map((item) => (
               <span key={item} className="hover-underline cursor-not-allowed">
