@@ -558,21 +558,14 @@ const App = () => {
                 </ul>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-white/10">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-          <span className="text-gray-400 mb-4 md:mb-0">© 2025 Project Zeta. All rights reserved.</span>
-          <div className="flex space-x-6">
-            {['About', 'Documentation', 'GitHub'].map((item) => (
-              <span key={item} className="hover-underline cursor-pointer text-gray-400 hover:text-white transition-colors">
-                {item}
-              </span>
-            ))}
-          </div>
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center">
+          <span className="text-gray-400">© 2025 Project Zeta. All rights reserved.</span>
         </div>
       </footer>
     </div>
