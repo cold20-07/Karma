@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Terminal, Cpu, Zap, ArrowRight, Brain, Workflow, Network } from 'lucide-react';
+import { Terminal, Cpu, Zap, ArrowRight, Brain, Workflow, Network, Users, FileText, Image, MessageSquare, CheckCircle, ArrowDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import WaitlistModal from './components/WaitlistModal';
 
@@ -37,13 +37,13 @@ const App = () => {
             className="text-center space-y-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              Intelligent
+              Your Personal
               <br />
-              <span className="gradient-text">AI Orchestration</span>
+              <span className="gradient-text">AI Assistant</span>
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Project Zeta revolutionizes AI workflows by intelligently orchestrating multiple models, 
-              optimizing prompts, and automating complex tasks through a unified protocol.
+              Project Zeta makes AI simple and powerful for everyone. Get better results from AI, 
+              automate complex tasks, and accomplish more with intelligent assistance.
             </p>
             <motion.div 
               initial={{ opacity: 0 }}
@@ -67,7 +67,271 @@ const App = () => {
             </motion.div>
           </motion.div>
 
-          {/* Key Features */}
+          {/* What Project Zeta Does */}
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8 }}
+            className="text-center space-y-12"
+          >
+            <div>
+              <h2 className="text-3xl font-bold mb-4">What Project Zeta Does for You</h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                Think of Project Zeta as your smart AI assistant that knows how to get the best results from different AI tools
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  title: 'Makes AI Easy to Use',
+                  description: 'Just tell us what you need in plain English. We handle all the technical stuff to get you perfect results.',
+                  icon: MessageSquare
+                },
+                {
+                  title: 'Chooses the Right AI for You',
+                  description: 'Different tasks need different AI tools. We automatically pick the best one for what you want to accomplish.',
+                  icon: Brain
+                },
+                {
+                  title: 'Handles Complex Projects',
+                  description: 'Give us a big task and we break it down into steps, using multiple AI tools to get everything done.',
+                  icon: CheckCircle
+                }
+              ].map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: false }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  className="p-8 border border-white/10 rounded-2xl hover:bg-white/5 transition-all"
+                >
+                  <feature.icon className="w-8 h-8 mb-4" />
+                  <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                  <p className="text-gray-400">{feature.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto space-y-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h2 className="text-3xl font-bold mb-4">See Project Zeta in Action</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Here are some real examples of how Project Zeta can help you accomplish tasks that would normally take hours
+            </p>
+          </motion.div>
+
+          {/* Use Case 1: Content Creation */}
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8 }}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          >
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold">Create a Complete Marketing Campaign</h3>
+              <p className="text-gray-400">
+                You say: "I need a marketing campaign for my new coffee shop"
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-sm font-bold">1</div>
+                  <span>Project Zeta writes compelling ad copy</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-sm font-bold">2</div>
+                  <span>Creates eye-catching images for social media</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-sm font-bold">3</div>
+                  <span>Designs a complete marketing strategy</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-sm font-bold">✓</div>
+                  <span className="text-green-400">Ready-to-use marketing materials in minutes</span>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white/5 rounded-2xl p-8 border border-white/10">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3 mb-6">
+                  <Users className="w-6 h-6" />
+                  <span className="font-bold">Marketing Campaign Generator</span>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between p-3 bg-white/10 rounded-lg">
+                    <span className="flex items-center space-x-2">
+                      <FileText className="w-4 h-4" />
+                      <span>Writing ad copy</span>
+                    </span>
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-white/10 rounded-lg">
+                    <span className="flex items-center space-x-2">
+                      <Image className="w-4 h-4" />
+                      <span>Creating visuals</span>
+                    </span>
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-white/10 rounded-lg">
+                    <span className="flex items-center space-x-2">
+                      <Brain className="w-4 h-4" />
+                      <span>Strategy planning</span>
+                    </span>
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Use Case 2: Research & Analysis */}
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8 }}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          >
+            <div className="bg-white/5 rounded-2xl p-8 border border-white/10 lg:order-1">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3 mb-6">
+                  <Terminal className="w-6 h-6" />
+                  <span className="font-bold">Research Assistant</span>
+                </div>
+                <div className="space-y-3">
+                  <div className="p-3 bg-blue-500/20 rounded-lg border border-blue-500/30">
+                    <span className="text-sm">Input: "Research sustainable packaging options for my business"</span>
+                  </div>
+                  <ArrowDown className="w-4 h-4 mx-auto text-gray-400" />
+                  <div className="space-y-2">
+                    <div className="p-2 bg-white/10 rounded text-sm">📊 Market analysis</div>
+                    <div className="p-2 bg-white/10 rounded text-sm">💰 Cost comparisons</div>
+                    <div className="p-2 bg-white/10 rounded text-sm">🌱 Environmental impact</div>
+                    <div className="p-2 bg-white/10 rounded text-sm">📋 Implementation plan</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-6 lg:order-2">
+              <h3 className="text-2xl font-bold">Get Comprehensive Research Done</h3>
+              <p className="text-gray-400">
+                You say: "Research sustainable packaging options for my business"
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-sm font-bold">1</div>
+                  <span>Gathers information from multiple sources</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-sm font-bold">2</div>
+                  <span>Analyzes costs, benefits, and environmental impact</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-sm font-bold">3</div>
+                  <span>Creates a detailed comparison report</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-sm font-bold">✓</div>
+                  <span className="text-green-400">Complete research report with recommendations</span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Use Case 3: Learning & Education */}
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8 }}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          >
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold">Learn Any Topic Effectively</h3>
+              <p className="text-gray-400">
+                You say: "I want to learn digital photography basics"
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center text-sm font-bold">1</div>
+                  <span>Creates a personalized learning plan</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center text-sm font-bold">2</div>
+                  <span>Generates easy-to-understand explanations</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center text-sm font-bold">3</div>
+                  <span>Creates practice exercises and quizzes</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-sm font-bold">✓</div>
+                  <span className="text-green-400">Complete learning curriculum tailored to you</span>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white/5 rounded-2xl p-8 border border-white/10">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3 mb-6">
+                  <Brain className="w-6 h-6" />
+                  <span className="font-bold">Learning Assistant</span>
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="p-3 bg-orange-500/20 rounded-lg border border-orange-500/30 text-center">
+                    <div className="text-2xl mb-1">📚</div>
+                    <div className="text-xs">Lesson 1: Camera Basics</div>
+                  </div>
+                  <div className="p-3 bg-orange-500/20 rounded-lg border border-orange-500/30 text-center">
+                    <div className="text-2xl mb-1">🎯</div>
+                    <div className="text-xs">Practice: Composition</div>
+                  </div>
+                  <div className="p-3 bg-orange-500/20 rounded-lg border border-orange-500/30 text-center">
+                    <div className="text-2xl mb-1">💡</div>
+                    <div className="text-xs">Tips: Lighting</div>
+                  </div>
+                  <div className="p-3 bg-orange-500/20 rounded-lg border border-orange-500/30 text-center">
+                    <div className="text-2xl mb-1">✅</div>
+                    <div className="text-xs">Quiz: Test Knowledge</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Technical Capabilities Section */}
+      <section className="py-20 px-6 border-t border-white/10">
+        <div className="max-w-7xl mx-auto space-y-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h2 className="text-3xl font-bold mb-4">Powered by Advanced Technology</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Built on cutting-edge technology to deliver powerful AI orchestration and seamless user experiences
+            </p>
+          </motion.div>
+
+          {/* Core Technologies */}
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -117,59 +381,50 @@ const App = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.8 }}
-            className="space-y-12"
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
           >
-            <div className="text-center">
-              <h2 className="text-3xl font-bold mb-4">Technical Capabilities</h2>
-              <p className="text-gray-400 max-w-2xl mx-auto">
-                Built on cutting-edge technology to deliver powerful AI orchestration
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {[
-                {
-                  title: 'Model Context Protocol (MCP)',
-                  description: 'A sophisticated protocol that maintains context and ensures coherent communication between different AI models and tasks.',
-                  details: ['Context preservation across models', 'Intelligent state management', 'Optimized data flow']
-                },
-                {
-                  title: 'Dynamic Task Decomposition',
-                  description: 'Automatically breaks down complex tasks into optimized subtasks for efficient processing.',
-                  details: ['Intelligent task analysis', 'Optimal model selection', 'Parallel processing']
-                },
-                {
-                  title: 'Advanced Prompt Engineering',
-                  description: 'Sophisticated algorithms that enhance prompts for better AI model performance.',
-                  details: ['Context-aware optimization', 'Model-specific formatting', 'Dynamic adaptation']
-                },
-                {
-                  title: 'Real-time Orchestration',
-                  description: 'Seamlessly coordinates multiple AI models and tasks in real-time.',
-                  details: ['Load balancing', 'Priority queuing', 'Failure recovery']
-                }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="p-8 border border-white/10 rounded-2xl hover:bg-white/5 transition-all"
-                >
-                  <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                  <p className="text-gray-400 mb-4">{item.description}</p>
-                  <ul className="space-y-2">
-                    {item.details.map((detail, i) => (
-                      <li key={i} className="flex items-center text-sm text-gray-300">
-                        <span className="w-1.5 h-1.5 bg-white rounded-full mr-2" />
-                        {detail}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
+            {[
+              {
+                title: 'Model Context Protocol (MCP)',
+                description: 'A sophisticated protocol that maintains context and ensures coherent communication between different AI models and tasks.',
+                details: ['Context preservation across models', 'Intelligent state management', 'Optimized data flow']
+              },
+              {
+                title: 'Dynamic Task Decomposition',
+                description: 'Automatically breaks down complex tasks into optimized subtasks for efficient processing.',
+                details: ['Intelligent task analysis', 'Optimal model selection', 'Parallel processing']
+              },
+              {
+                title: 'Advanced Prompt Engineering',
+                description: 'Sophisticated algorithms that enhance prompts for better AI model performance.',
+                details: ['Context-aware optimization', 'Model-specific formatting', 'Dynamic adaptation']
+              },
+              {
+                title: 'Real-time Orchestration',
+                description: 'Seamlessly coordinates multiple AI models and tasks in real-time.',
+                details: ['Load balancing', 'Priority queuing', 'Failure recovery']
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="p-8 border border-white/10 rounded-2xl hover:bg-white/5 transition-all"
+              >
+                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                <p className="text-gray-400 mb-4">{item.description}</p>
+                <ul className="space-y-2">
+                  {item.details.map((detail, i) => (
+                    <li key={i} className="flex items-center text-sm text-gray-300">
+                      <span className="w-1.5 h-1.5 bg-white rounded-full mr-2" />
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </section>
