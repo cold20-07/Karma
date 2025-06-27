@@ -558,7 +558,7 @@ const App = () => {
                 </ul>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
