@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Terminal, Cpu, Zap, ArrowRight, Brain, Workflow, Network, Users, FileText, Image, MessageSquare, CheckCircle, ArrowDown } from 'lucide-react';
+import { Terminal, Cpu, Zap, ArrowRight, Brain, Workflow, Network, Users, FileText, Image, MessageSquare, CheckCircle, ArrowDown, Bot, Settings, Cloud, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import WaitlistModal from './components/WaitlistModal';
 
@@ -37,9 +37,9 @@ const App = () => {
             className="text-center space-y-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              Your Personal
+              Unlock
               <br />
-              <span className="gradient-text">AI Assistant</span>
+              <span className="gradient-text">Limitless Possibilities</span>
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
               Project Zeta makes AI simple and powerful for everyone. Get better results from AI, 
@@ -66,55 +66,192 @@ const App = () => {
               </Link>
             </motion.div>
           </motion.div>
+        </div>
+      </section>
 
-          {/* What Project Zeta Does */}
+      {/* Autonomous AI Agents Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto space-y-16">
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.8 }}
-            className="text-center space-y-12"
+            className="text-center space-y-8"
           >
-            <div>
-              <h2 className="text-3xl font-bold mb-4">What Project Zeta Does for You</h2>
-              <p className="text-gray-400 max-w-2xl mx-auto">
-                Think of Project Zeta as your smart AI assistant that knows how to get the best results from different AI tools
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: 'Makes AI Easy to Use',
-                  description: 'Just tell us what you need in plain English. We handle all the technical stuff to get you perfect results.',
-                  icon: MessageSquare
-                },
-                {
-                  title: 'Chooses the Right AI for You',
-                  description: 'Different tasks need different AI tools. We automatically pick the best one for what you want to accomplish.',
-                  icon: Brain
-                },
-                {
-                  title: 'Handles Complex Projects',
-                  description: 'Give us a big task and we break it down into steps, using multiple AI tools to get everything done.',
-                  icon: CheckCircle
-                }
-              ].map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="p-8 border border-white/10 rounded-2xl hover:bg-white/5 transition-all"
-                >
-                  <feature.icon className="w-8 h-8 mb-4" />
-                  <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                  <p className="text-gray-400">{feature.description}</p>
-                </motion.div>
-              ))}
-            </div>
+            <h2 className="text-4xl font-bold mb-4">
+              Create Your Own <span className="gradient-text">AI Workforce</span>
+            </h2>
+            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+              Project Zeta doesn't just help you use AI - it creates personalized AI agents that work for you 24/7. 
+              These intelligent assistants learn your preferences and handle complex tasks automatically.
+            </p>
           </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Features */}
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.8 }}
+              className="space-y-8"
+            >
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center">
+                    <Bot className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Autonomous AI Agents</h3>
+                    <p className="text-gray-400">
+                      Create custom AI agents that understand your specific needs and work independently to complete tasks, 
+                      from simple automation to complex multi-step projects.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 rounded-full bg-purple-500/20 border border-purple-500/30 flex items-center justify-center">
+                    <Settings className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Personalized Automation</h3>
+                    <p className="text-gray-400">
+                      Your AI agents learn from your behavior and preferences, becoming more effective over time. 
+                      They adapt to your workflow and anticipate your needs.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 rounded-full bg-green-500/20 border border-green-500/30 flex items-center justify-center">
+                    <Cloud className="w-6 h-6 text-green-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">MCP Cloud Hosting</h3>
+                    <p className="text-gray-400">
+                      Your AI agents run on our secure Model Context Protocol (MCP) infrastructure, 
+                      ensuring they're always available and maintain context across all interactions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right side - Visual representation */}
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.8 }}
+              className="bg-white/5 rounded-2xl p-8 border border-white/10"
+            >
+              <div className="space-y-6">
+                <div className="flex items-center space-x-3 mb-6">
+                  <Layers className="w-6 h-6" />
+                  <span className="font-bold">Your Personal AI Agent Network</span>
+                </div>
+                
+                {/* Agent Cards */}
+                <div className="space-y-4">
+                  <div className="p-4 bg-blue-500/20 rounded-lg border border-blue-500/30">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="font-medium">📧 Email Assistant Agent</span>
+                      <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">Active</span>
+                    </div>
+                    <p className="text-sm text-gray-300">Automatically sorts, responds, and schedules emails</p>
+                  </div>
+
+                  <div className="p-4 bg-purple-500/20 rounded-lg border border-purple-500/30">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="font-medium">📊 Research Agent</span>
+                      <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">Active</span>
+                    </div>
+                    <p className="text-sm text-gray-300">Continuously monitors trends in your industry</p>
+                  </div>
+
+                  <div className="p-4 bg-orange-500/20 rounded-lg border border-orange-500/30">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="font-medium">🎨 Content Creator Agent</span>
+                      <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">Active</span>
+                    </div>
+                    <p className="text-sm text-gray-300">Creates social media posts and marketing content</p>
+                  </div>
+
+                  <div className="p-4 bg-gray-500/20 rounded-lg border border-gray-500/30">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="font-medium">+ Create New Agent</span>
+                      <span className="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded">Ready</span>
+                    </div>
+                    <p className="text-sm text-gray-300">Design custom agents for any task</p>
+                  </div>
+                </div>
+
+                <div className="mt-6 p-3 bg-white/10 rounded-lg">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <Cloud className="w-4 h-4 text-blue-400" />
+                    <span className="text-sm font-medium">MCP Cloud Status</span>
+                  </div>
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="text-gray-300">All agents synchronized</span>
+                    <span className="text-green-400">● Online</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* What Project Zeta Does */}
+      <section className="py-20 px-6 border-t border-white/10">
+        <div className="max-w-7xl mx-auto space-y-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8 }}
+            className="text-center space-y-8"
+          >
+            <h2 className="text-3xl font-bold mb-4">What Project Zeta Does for You</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Think of Project Zeta as your smart AI assistant that knows how to get the best results from different AI tools
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Makes AI Easy to Use',
+                description: 'Just tell us what you need in plain English. We handle all the technical stuff to get you perfect results.',
+                icon: MessageSquare
+              },
+              {
+                title: 'Chooses the Right AI for You',
+                description: 'Different tasks need different AI tools. We automatically pick the best one for what you want to accomplish.',
+                icon: Brain
+              },
+              {
+                title: 'Handles Complex Projects',
+                description: 'Give us a big task and we break it down into steps, using multiple AI tools to get everything done.',
+                icon: CheckCircle
+              }
+            ].map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                className="p-8 border border-white/10 rounded-2xl hover:bg-white/5 transition-all"
+              >
+                <feature.icon className="w-8 h-8 mb-4" />
+                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                <p className="text-gray-400">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
