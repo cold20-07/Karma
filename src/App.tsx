@@ -503,11 +503,7 @@ const App = () => {
               >
                 <feature.icon className="w-8 h-8 mb-4" />
                 <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                <p className="text-gray-400 mb-4">{feature.description}</p>
-                <span className="inline-flex items-center text-sm">
-                  <span>Coming Soon</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </span>
+                <p className="text-gray-400">{feature.description}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -562,7 +558,7 @@ const App = () => {
                 </ul>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -572,8 +568,8 @@ const App = () => {
           <span className="text-gray-400 mb-4 md:mb-0">© 2025 Project Zeta. All rights reserved.</span>
           <div className="flex space-x-6">
             {['About', 'Documentation', 'GitHub'].map((item) => (
-              <span key={item} className="hover-underline cursor-not-allowed">
-                Coming Soon
+              <span key={item} className="hover-underline cursor-pointer text-gray-400 hover:text-white transition-colors">
+                {item}
               </span>
             ))}
           </div>
